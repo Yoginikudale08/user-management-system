@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+
+
+  <!-- Avatar -->
+  <div class="avatar">
+    <span id="avatarLetter"></span>
+  </div>
+
+  <!-- Welcome -->
+  <h2 id="welcomeText"></h2>
+  <p class="user-name" id="userNameText"></p>
+
+  <hr>
+
+  <!-- EDIT NAME -->
+  <h3>Edit Profile</h3>
+  <input type="text" id="editName" placeholder="Enter new name">
+  <button onclick="updateName()">Update Name</button>
+
+  <p id="profileMsg"></p>
+
+  <hr>
+
+  <!-- CHANGE PASSWORD (UI DEMO) -->
+  <h3>Change Password</h3>
+  <input type="password" id="newPassword" placeholder="New Password">
+  <button onclick="changePassword()">Change Password</button>
+
+  <p id="passwordMsg"></p>
+
+  <br>
+  <button onclick="logout()">Logout</button>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>

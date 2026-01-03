@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <div class="dashboard-header">
+      <h2>Admin Dashboard</h2>
+      <!-- Removed Logout button from here -->
+    </div>
+    <div class="avatar small">
+      <span>A</span>
+    </div>
+    
+
+    <!-- ADD USER FORM -->
+    <h3>Add New User</h3>
+    <div class="add-user-form">
+      <input type="text" id="name" placeholder="Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+
+      <select id="role">
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+
+      <button onclick="addUser()">Add User</button>
+    </div>
+
+    <!-- USERS TABLE -->
+    <h3 style="margin-top:30px;">Registered Users</h3>
+    <table id="usersTable" class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loaded via admin.js -->
+      </tbody>
+    </table>
+
+    
+    
+
+    <!-- LOGOUT BUTTON AT BOTTOM -->
+    <div style="margin-top: 20px; text-align: center;">
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+  </div>
+
+  <script src="js/admin.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
